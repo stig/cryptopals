@@ -1,8 +1,8 @@
 (ns cryptopals.core)
 
-(def hex-chars (vec "0123456789abcdef"))
+(def ^:private hex-chars (vec "0123456789abcdef"))
 
-(defn combine-hex
+(defn- combine-hex
   "Combines individual hex digits"
   [a & b]
   (if (seq b)
